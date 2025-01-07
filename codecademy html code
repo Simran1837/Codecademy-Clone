@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Log In | Codecademy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="codecademystyle.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="https://www.codecademy.com" alt="Codecademy"><img
+                        src="https://cdn.worldvectorlogo.com/logos/codecademy.svg" height="27px" alt="Codecademy Logo">
+                </a>
+            </div>
+            <nav>
+                <div class="dropdown" id="catalog">
+                    Catalog <span class="triangle">▼</span>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://www.codecademy.com/catalog/language/python">Python</a></li>
+                        <li><a href="https://www.codecademy.com/catalog/language/javascript">JavaScript</a></li>
+                        <li><a href="https://www.codecademy.com/catalog/language/c-plus-plus">C++</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown" id="resources">
+                    Resources <span class="triangle">▼</span>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://www.codecademy.com/resources/docs/html">HTML</a></li>
+                        <li><a href="https://www.codecademy.com/resources/docs/css">CSS</a></li>
+                        <li><a href="https://www.codecademy.com/resources/docs/git">Git</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown" id="community">
+                    Community <span class="triangle">▼</span>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Visit Community</a></li>
+                        <li><a href="https://www.codecademy.com/events">Events</a></li>
+                        <li><a href="https://www.codecademy.com/resources/blog/category/learner-stories/">Learner
+                                Stories</a></li>
+                        <li><a href="https://try.codecademy.com/code-crew/">Code Crew</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown" id="pricing">
+                    Pricing <span class="triangle">▼</span>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://www.codecademy.com/pricing">For Individuals</a></li>
+                        <li><a href="https://www.codecademy.com/student-center">For Students</a></li>
+                        <li><a href="https://www.codecademy.com/business#section-pricing-table">For Business</a></li>
+                    </ul>
+                </div>
+                <a href="https://www.codecademy.com/career-center">Career Center</a>
+                <a href="https://www.codecademy.com/business">For Business</a>
+            </nav>
+            <div class="search-container">
+                <button class="btn btn-default" onclick="toggleSearchBar()"><i class="bi bi-search"></i></button>
+                <input type="text" id="search-bar" placeholder="Search..." style="display: none;">
+            </div>
+            <div>
+                <button id="sign-up" class="btn btn-primary" type="button">Sign up</button>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <form>
+            <h2>Log in to Codecademy</h2>
+            <p>* Required</p>
+            <label name="user">Email or Username*</label>
+            <input type="text" id="user" name="user" required>
+            <label name="pass">Password*</label>
+            <input type="password" id="pass" name="pass" required>
+            <a id="link" href="https://www.codecademy.com/secret/new">I forgot my password</a>
+            <br>
+            <button class="btn btn-primary" type="submit">Log in</button>
+            <br><br>
+            <p id="text">Or log in using:</p>
+            <div class="social">
+                <a
+                    href="https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?access_type=offline&client_id=307873348107-bl4vnhr9rsbnfhk9erec3ojadg73ib7h.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fwww.codecademy.com%2Fusers%2Fauth%2Fgoogle_oauth2%2Fcallback&response_type=code&scope=email%20profile&state=9466004c2c922668efdcaa58cdaa2e6ca2d89baf3e7f1bba&service=lso&o2v=1&ddm=1&flowName=GeneralOAuthFlow">
+                    <img src="https://static.vecteezy.com/system/resources/previews/013/948/549/non_2x/google-logo-on-transparent-white-background-free-vector.jpg"
+                        height="55px">
+                </a>
+                <a
+                    href="https://www.facebook.com/login.php?skip_api_login=1&api_key=212500508799908&kid_directed_site=0&app_id=212500508799908&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fv5.0%2Fdialog%2Foauth%3Fclient_id%3D212500508799908%26redirect_uri%3Dhttps%253A%252F%252Fwww.codecademy.com%252Fusers%252Fauth%252Ffacebook%252Fcallback%26response_type%3Dcode%26scope%3Demail%26state%3D0dca9b60845cf69d350db1d0cbe86c359ab744abca6bf795%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3Dd26f2e02-67f3-40fd-a97a-f081c05d2384%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fwww.codecademy.com%2Fusers%2Fauth%2Ffacebook%2Fcallback%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D0dca9b60845cf69d350db1d0cbe86c359ab744abca6bf795%23_%3D_&display=page&locale=hi_IN&pl_dbl=0">
+                    <img src="https://img.freepik.com/premium-vector/round-facebook-logo-isolated-white-background_469489-897.jpg"
+                        height="55px">
+                </a>
+                <a
+                    href="https://github.com/login?client_id=75de7dd5608f43e3057f&return_to=%2Flogin%2Foauth%2Fauthorize%3Fclient_id%3D75de7dd5608f43e3057f%26redirect_uri%3Dhttps%253A%252F%252Fwww.codecademy.com%252Fusers%252Fauth%252Fgithub%252Fcallback%26response_type%3Dcode%26scope%3Dpublic_repo%252Cuser%253Aemail%26state%3Df107b79c15dc6f24b4fe00ac7398c0a1c91d612be3ebf8a5">
+                    <img src="https://static.vecteezy.com/system/resources/previews/016/833/872/non_2x/github-logo-git-hub-icon-on-white-background-free-vector.jpg"
+                        height="55px">
+                </a>
+                <a href="https://x.com/i/flow/login?lang=en">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS62YcZkVmUr4XYta6QpUAJSP76w99oV5OGig&s"
+                        height="55px">
+                </a>
+                <a
+                    href="https://appleid.apple.com/auth/authorize?client_id=com.codecademy.codecademy&nonce=0hTijzAIQpjLpNpg0dNtUA&redirect_uri=https%3A%2F%2Fwww.codecademy.com%2Fusers%2Fauth%2Fapple%2Fcallback&response_mode=form_post&response_type=code&scope=email+name&state=b7cb6a0e92380c97145c2585ea2988bd1748343be3eb9e92">
+                    <img src="https://i.pinimg.com/736x/60/6b/c0/606bc0717982547e555a514b479365a0.jpg" height="55px">
+                </a>
+            </div>
+            <br>
+            <p>Not a member yet?
+                <a href="https://www.codecademy.com/register">Sign up for free</a>
+            </p>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2025 Codecademy, Inc. All Rights Reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleSearchBar() {
+            var searchBar = document.getElementById("search-bar");
+            if (searchBar.style.display === "none" || searchBar.style.display === "") {
+                searchBar.style.display = "block";
+            } else {
+                searchBar.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
